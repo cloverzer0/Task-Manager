@@ -1,0 +1,88 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Authentication</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        .container h2 {
+            margin-top: 0;
+        }
+        .container form {
+            display: flex;
+            flex-direction: column;
+        }
+        .container form input {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .container form button {
+            padding: 10px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .container form button:hover {
+            background-color: #0056b3;
+        }
+        .toggle-link {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .toggle-link a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        .toggle-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Sign In</h2>
+        <form id="signInForm">
+            <input type="email" placeholder="Email" id="SignInEmail" required>
+            <input type="password" placeholder="Password" id="SignInPassword" required>
+            <button type="submit" method="GET" id="signInButton">Sign In</button>
+        </form>
+        <div class="toggle-link">
+            <p>Don't have an account? <a class="toggle" href="#">Sign Up</a></p>
+        </div>
+    </div>
+
+    <div class="container" style="display: none;">
+        <h2>Sign Up</h2>
+        <form id="signUpForm">
+            <input type="text" placeholder="Username" id="SignUpUsername" required>
+            <input type="email" placeholder="Email" id="SignUpEmail" required>
+            <input type="password" placeholder="Password" id="SignUpPassword" required>
+            <button type="submit" type="POST" id="signUpButton">Sign Up</button>
+        </form>
+        <div class="toggle-link">
+            <p>Already have an account? <a class="toggle" href="#">Sign In</a></p>
+        </div>
+    </div>
+
+    <script src="../script/script.js"></script>
+</body>
+</html>
